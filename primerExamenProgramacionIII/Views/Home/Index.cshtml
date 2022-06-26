@@ -1,0 +1,38 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="hero text-center">
+    <h1>Busqueda de Estudiantes y Profesores</h1>
+    <p>Jossue D. Rodriguez Mora</p>
+    <a href="#personas" class="btn btn-dark">Buscar</a>
+</div>
+
+<div class="container m-a " id="personas">
+
+   <div class="row">
+      <div class="col">
+          <!--Card 1 Profesor-->
+        <div class="card">
+          <img src="https://images.pexels.com/photos/3771074/pexels-photo-3771074.jpeg" class="card-img-top" alt="..." height="200">
+          <div class="card-body">
+            <h5 class="card-title">Profesores</h5>
+            <p class="card-text">Por medio de esta funcion se puden ver los profesores y realizar una busqueda por nombre si desea encontrar uno en especifico</p>
+            <a asp-action="index" asp-controller="Profesores" class="btn btn-dark">Buscar Profesor</a>
+          </div>
+        </div>
+      </div>
+
+    <div class="col">
+         <!--Card 2 Estudiantes-->
+         <div class="card">
+          <img src="https://images.pexels.com/photos/1454360/pexels-photo-1454360.jpeg" class="card-img-top" alt="..."  height="200">
+          <div class="card-body">
+            <h5 class="card-title">Estudiantes</h5>
+            <p class="card-text">Por medio de esta funcion se puden ver los estudiantes y realizar una busqueda por nombre si desea encontrar uno en especifico</p>
+            <a asp-action="index" asp-controller="Estudiantes" class="btn btn-dark">Buscar Estudiante</a>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>

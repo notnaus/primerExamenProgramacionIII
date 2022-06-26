@@ -1,0 +1,25 @@
+﻿@model IEnumerable<Profesor>
+@{
+    ViewData["Title"] = "Resultados Profesores";
+}
+
+<div class="hero2 text-center">
+    <h1 class="text-white">Resultado:</h1>
+</div>
+
+
+<div class="container m-a">
+@foreach (var item in Model){
+        
+    <h3>Nombre: @item.Nombre @item.Apellido </h3>
+    <p>Cedula: @item.Cedula</p>
+        <p>Area de Conocimiento: @item.AreadeConocimiento</p>
+
+        if(@item.Id < 0)
+        {
+            <h1>nooo</h1>
+        }
+
+}
+<a class="btn btn-dark" asp-action="Index">Volver a Profesores</a>
+</div>

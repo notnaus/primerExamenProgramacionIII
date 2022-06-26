@@ -1,0 +1,42 @@
+﻿@model IEnumerable<Estudiante>
+@{
+    ViewData["Title"] = "Estudiantes";
+}
+
+<div class="hero2 text-center">
+    <h1 class="text-white">Estudiantes</h1>
+        <!--Formulario de busqueda-->
+     <form asp-action="buscarEstudiantes">
+      <input type="text" name="texto" id="texto" placeholder="Digite el nombre.." /><br><br>
+      <button class="btn btn-primary"  type="submit">Ejecutar Busqueda</button>
+
+  </form>
+</div>
+
+<div class="container m-a">
+ 
+  @foreach (var item in Model){
+
+      <div class="accordion accordion-flush" id="accordionFlushExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingOne">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                  @item.Nombre
+              </button>
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
+                  Cedula: @item.Cedula <br>
+                  Edad: @item.Edad <br>
+                  Carrera: @item.Carrera <br>
+                  Cantidad de Cursos: @item.CantidadDeCursos
+
+
+              </div>
+            </div>
+          </div>
+      </div>
+  }
+
+
+</div>
